@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:qweqwe/classi/app_colors.dart';
+import 'package:qweqwe/classi/app_typography.dart'; 
 
 @RoutePage()
 
@@ -11,32 +13,25 @@ class FirstPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 100,
-        backgroundColor: Colors.pink,
-        foregroundColor: Colors.white,
+        backgroundColor: AppColors.primary,
+        
+        foregroundColor: AppColors.background,
         elevation: 0,
-        title: const Column(
+        title: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Discover',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
+              'Discover', style: AppTypography.title2.copyWith(color: AppColors.clearCol),
 
               ),
-            ),
-            Text(
-              'Combats',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
+            
+           Text(
+              'Combats', style: AppTypography.title2.copyWith(color: AppColors.clearCol),
               ),
-            ),
+            
           ],
-
+      
         ),
         
         actions: [
@@ -45,7 +40,7 @@ class FirstPage extends StatelessWidget {
             child:
               Text('FILTER',
               style: TextStyle(
-                color: Colors.white,
+                color: AppColors.clearCol,
                 fontSize: 16,
                 fontWeight: FontWeight.w500,
               ),
@@ -63,14 +58,19 @@ class FirstPage extends StatelessWidget {
               children: [ Text(
               'Trending this week',
               style: TextStyle(
-                color: Colors.pink,
+                color: AppColors.primary,
                 fontSize: 21,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            const Text('View All >>'),
+            const Text(
+              'View All >>',
+              style: TextStyle(
+                color: AppColors.textDark,
+              ),
+            ),
           ],
-          ),
+        ),
           SizedBox(height: 20),
           //карточка 1
           Container( 
@@ -78,7 +78,7 @@ class FirstPage extends StatelessWidget {
             height: 100, //ращмер
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              border: Border.all(color: Colors.pink),
+              border: Border.all(color: AppColors.primary),
               borderRadius: BorderRadius.circular(12),
             ),
             child: Row(
@@ -89,7 +89,7 @@ class FirstPage extends StatelessWidget {
                   child: const Text(
                     'Scott Brown',
                     style: TextStyle(
-                      color: Colors.black,
+                      color: AppColors.textDark,
                       fontSize: 18,
                       fontWeight: FontWeight.w400
                     ),
@@ -100,7 +100,7 @@ class FirstPage extends StatelessWidget {
                     
                     'VS',
                     style: TextStyle(
-                      color: Colors.pink,
+                      color: AppColors.primary,
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
                     ),
@@ -111,7 +111,7 @@ class FirstPage extends StatelessWidget {
                   child: const Text(
                     'Stone Stella',
                     style: TextStyle(
-                      color: Colors.black,
+                      color: AppColors.textDark,
                       fontSize: 18,
                       fontWeight: FontWeight.w400
                     ),
