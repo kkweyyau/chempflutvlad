@@ -6,5 +6,5 @@ class AppColors {
   static const Color background = Color(0xffF7F7FA);
   static const Color textDark = Color(0xff030303);
   static const Color accentInactive = Color(0x4DFA5075);
-  static const Color clearCol = Color(0xFFFFFFFF);
+  static const Color white = Color(0xFFFFFFFF);
 }

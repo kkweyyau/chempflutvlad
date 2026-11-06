@@ -1,33 +1,61 @@
 import 'package:flutter/material.dart';
 
-
 class AppTypography {
-  static const title2 = TextStyle(
-    fontFamily: 'Red Hat Text', 
-    fontSize: 20, 
-    fontWeight: FontWeight.bold,
+  AppTypography._();
+
+  static const title2ExtraBold = TextStyle(
+    fontFamily: 'Red Hat Text',
+    fontSize: 20,
+    fontWeight: FontWeight.w700,
+    height: 1.4,
     letterSpacing: 0.38,
-    height: 20 / 28, 
   );
-  static const title3 = TextStyle(
+
+  static const caption2 = TextStyle(
     fontFamily: 'Red Hat Text',
     fontSize: 12,
     fontWeight: FontWeight.w400,
+    height: 1.33,
     letterSpacing: 0,
-    height: 16 / 12,
   );
-  static const title4 = TextStyle(
+
+  static const headlineMedium = TextStyle(
     fontFamily: 'Red Hat Text',
     fontSize: 16,
     fontWeight: FontWeight.w500,
-    letterSpacing: 0,
     height: 1.25,
+    letterSpacing: -0.32,
   );
-  static const title5 = TextStyle(
+
+  static const searchText = TextStyle(
+    fontFamily: 'Poppins',
+    fontSize: 12, 
+    fontWeight: FontWeight.w400,
+    height: 1.0,
+    letterSpacing: -0.3,
+  );
+
+  static const captionMini = TextStyle(
+    fontFamily: 'Red Hat Text',
+    fontSize: 10,
+    fontWeight: FontWeight.w400,
+    letterSpacing: 0,
+    height: 1.0,
+  );
+
+  static const captionMiniBold = TextStyle(
     fontFamily: 'Red Hat Text',
     fontSize: 12,
     fontWeight: FontWeight.w700,
     letterSpacing: 0,
-    height: 1,
+    height: 1.0,
+  );
+
+  static const pricePoppins = TextStyle(
+    fontFamily: 'Poppins',
+    fontSize: 12,
+    fontWeight: FontWeight.w700,
+    letterSpacing: 0,
+    height: 1.0,
   );
 }

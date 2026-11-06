@@ -15,14 +15,13 @@ class FirstPage extends StatelessWidget {
       appBar: AppBar(
         toolbarHeight: 100,
         backgroundColor: AppColors.primary,
-        foregroundColor: AppColors.background,
+        foregroundColor: AppColors.white,
         elevation: 0,
         titleSpacing: 30,
         title: Text(
           'Discover\nCombats',
-          style: AppTypography.title2.copyWith(
-            color: AppColors.clearCol, 
-            height: 1.4,
+          style: AppTypography.title2ExtraBold.copyWith(
+            color: AppColors.white, 
           ),
         ),
         actions: [
@@ -32,7 +31,9 @@ class FirstPage extends StatelessWidget {
               alignment: Alignment.bottomCenter,
               child: Text(
                 'FILTER',
-                style: AppTypography.title4.copyWith(color: AppColors.clearCol),
+                style: AppTypography.headlineMedium.copyWith(
+                  color: AppColors.white,
+                ),
               ),
             ),
           ),
@@ -48,7 +49,7 @@ class FirstPage extends StatelessWidget {
             child: Container(
               height: 56,
               decoration: BoxDecoration(
-                color: AppColors.clearCol,
+                color: AppColors.white,
                 borderRadius: BorderRadius.circular(28),
               ),
               child: Row(
@@ -58,16 +59,14 @@ class FirstPage extends StatelessWidget {
                   const SizedBox(width: 12),
                   Text(
                     'Search Combat',
-                    style: TextStyle(
+                    style: AppTypography.searchText.copyWith(
                       color: AppColors.primary,
-                      fontSize: 16,
                     ),
                   ),
                 ],
               ),
             ),
           ),
-
           Expanded(
             child: Container(
               color: AppColors.background, 
@@ -79,89 +78,126 @@ class FirstPage extends StatelessWidget {
                     children: [
                       Text(
                         'Trending this week',
-                        style: TextStyle(
+                        style: AppTypography.title2ExtraBold.copyWith(
                           color: AppColors.primary,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
                         ),
                       ),
                       Text(
                         'View All >>',
-                        style: AppTypography.title3.copyWith(color: AppColors.textDark),
+                        style: AppTypography.caption2.copyWith(
+                          color: AppColors.textDark,
+                        ),
                       ),
                     ],
                   ),
                   
                   const SizedBox(height: 20),
-                  
-//carta
+
                   Container(
                     width: double.infinity,
-                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
                     decoration: BoxDecoration(
                       border: Border.all(color: AppColors.primary),
                       borderRadius: BorderRadius.circular(16),
                     ),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        
-// левая парт
                         Row(
+                          mainAxisSize: MainAxisSize.min,
                           children: [
-
                             Column(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                ClipOval(
-                                  child: Image.asset(
-                                    'assets/123.png', 
-                                    width: 40,
-                                    height: 40,
-                                    fit: BoxFit.cover, 
-                                  ),
+                                Stack(
+                                  clipBehavior: Clip.none,
+                                  children: [
+                                    ClipOval(
+                                      child: Image.asset(
+                                        'assets/123.png', 
+                                        width: 40, height: 40, fit: BoxFit.cover, 
+                                      ),
+                                    ),
+                                    Positioned(
+                                      top: -8, left: -4,
+                                      child: Container(
+                                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                                        decoration: BoxDecoration(
+                                          color: AppColors.primary,
+                                          borderRadius: BorderRadius.circular(10),
+                                        ),
+                                        child: Text(
+                                          'Host', 
+                                          style: AppTypography.captionMini.copyWith(
+                                            color: AppColors.white,
+                                            fontSize: 8,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                                const SizedBox(height: 4),
+                                const SizedBox(height: 6),
                                 Text(
                                   'Scott Brown', 
-                                  style: AppTypography.title5.copyWith(color: AppColors.textDark), 
+                                  style: AppTypography.captionMiniBold.copyWith(
+                                    color: AppColors.textDark,
+                                  ), 
                                   maxLines: 1, 
                                   overflow: TextOverflow.ellipsis,
                                 ),
                               ],
                             ),
-                            
-                            
+
                             Padding(
                               padding: const EdgeInsets.symmetric(horizontal: 12),
                               child: Text(
                                 'VS',
-                                style: TextStyle(
+                                style: AppTypography.title2ExtraBold.copyWith(
                                   color: AppColors.primary,
                                   fontSize: 24,
-                                  fontWeight: FontWeight.w900,
                                 ),
                               ),
                             ),
-
-                            // 2 чел
+                            
                             Column(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                ClipOval(
-                                  child: Image.asset(
-                                    'assets/123.png', 
-                                    width: 40,
-                                    height: 40,
-                                    fit: BoxFit.cover, 
-                                  ),
+                                Stack(
+                                  clipBehavior: Clip.none,
+                                  children: [
+                                    ClipOval(
+                                      child: Image.asset(
+                                        'assets/123.png', 
+                                        width: 40, height: 40, fit: BoxFit.cover, 
+                                      ),
+                                    ),
+                                    Positioned(
+                                      top: -8, left: -4,
+                                      child: Container(
+                                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                                        decoration: BoxDecoration(
+                                          color: AppColors.primary,
+                                          borderRadius: BorderRadius.circular(10),
+                                        ),
+                                        child: Text(
+                                          'Guest', 
+                                          style: AppTypography.captionMini.copyWith(
+                                            color: AppColors.white,
+                                            fontSize: 8,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                                 
                                 
-                                const SizedBox(height: 4),
+                                const SizedBox(height: 6),
+
                                 Text(
                                   'Stone Stella', 
-                                  style: AppTypography.title5.copyWith(color: AppColors.textDark), 
+                                  style: AppTypography.captionMiniBold.copyWith(
+                                    color: AppColors.textDark,
+                                  ), 
                                   maxLines: 1, 
                                   overflow: TextOverflow.ellipsis,
                                 ),
@@ -169,39 +205,86 @@ class FirstPage extends StatelessWidget {
                             ),
                           ],
                         ),
-// правая чатсьт
-                        Column(
-                          mainAxisSize: MainAxisSize.min,
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            Row(
-                              mainAxisSize: MainAxisSize.min,
+
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 12.0),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text('Game: ', style: TextStyle(color: Colors.grey[600], fontSize: 11)),
-                                Text('Halo 5', style: TextStyle(color: AppColors.primary, fontSize: 13, fontWeight: FontWeight.bold)),
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Game Name:', 
+                                        style: AppTypography.captionMini, 
+                                        maxLines: 1, 
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                      const SizedBox(height: 6),
+                                      Text(
+                                        'Halo 5', 
+                                        style: AppTypography.captionMiniBold.copyWith(
+                                          color: AppColors.primary,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Status:', 
+                                        style: AppTypography.captionMini,
+                                      ),
+                                      const SizedBox(height: 6),
+                                      Text(
+                                        'Open', 
+                                        style: AppTypography.captionMiniBold.copyWith(
+                                          color: AppColors.primary,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Winning Price:', 
+                                        style: AppTypography.captionMini,
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                      const SizedBox(height: 6),
+                                      Text(
+                                        '\$4,000', 
+                                        style: AppTypography.pricePoppins.copyWith(
+                                          color: AppColors.primary,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
                               ],
                             ),
-                            const SizedBox(height: 6),
-                            Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Text('Status: ', style: TextStyle(color: Colors.grey[600], fontSize: 11)),
-                                Text('Open', style: TextStyle(color: AppColors.primary, fontSize: 13, fontWeight: FontWeight.bold)),
-                              ],
-                            ),
-                          ],
+                          ),
                         ),
-                        
                       ], 
                     ), 
                   ), 
-                  
-                ],
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
+                ], 
+              ), 
+            ), 
+          ), 
+        ], 
+      ), 
+    ); 
   }
 }
