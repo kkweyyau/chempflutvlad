@@ -20,7 +20,8 @@ class FirstPage extends StatelessWidget {
         titleSpacing: 30,
         title: Text(
           'Discover\nCombats',
-          style: AppTypography.title2.copyWith(color: AppColors.clearCol, 
+          style: AppTypography.title2.copyWith(
+            color: AppColors.clearCol, 
             height: 1.4,
           ),
         ),
@@ -73,7 +74,6 @@ class FirstPage extends StatelessWidget {
               padding: const EdgeInsets.all(16), 
               child: Column(
                 children: [
-
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -94,44 +94,112 @@ class FirstPage extends StatelessWidget {
                   
                   const SizedBox(height: 20),
                   
-                  Container( 
+//carta
+                  Container(
                     width: double.infinity,
-                    height: 100, 
-
-                    padding: const EdgeInsets.symmetric(horizontal: 20), 
+                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                     decoration: BoxDecoration(
                       border: Border.all(color: AppColors.primary),
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(16),
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          'Scott Brown',
-                          style: AppTypography.title5.copyWith(color: AppColors.textDark),
-                        ),
-                        Text(
-                          'VS',
-                          style: TextStyle(
-                            color: AppColors.primary,
-                            fontSize: 24,
-                            fontWeight: FontWeight.w800,
-                          ),
-                        ),
-                        Text(
-                          'Stone Stella',
-                          style: AppTypography.title5.copyWith(color: AppColors.textDark),
-                          ),
                         
-                      ],
-                    ),
-                  ),
+// левая парт
+                        Row(
+                          children: [
+
+                            Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                ClipOval(
+                                  child: Image.asset(
+                                    'assets/123.png', 
+                                    width: 40,
+                                    height: 40,
+                                    fit: BoxFit.cover, 
+                                  ),
+                                ),
+                                const SizedBox(height: 4),
+                                Text(
+                                  'Scott Brown', 
+                                  style: AppTypography.title5.copyWith(color: AppColors.textDark), 
+                                  maxLines: 1, 
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ],
+                            ),
+                            
+                            
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 12),
+                              child: Text(
+                                'VS',
+                                style: TextStyle(
+                                  color: AppColors.primary,
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.w900,
+                                ),
+                              ),
+                            ),
+
+                            // 2 чел
+                            Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                ClipOval(
+                                  child: Image.asset(
+                                    'assets/123.png', 
+                                    width: 40,
+                                    height: 40,
+                                    fit: BoxFit.cover, 
+                                  ),
+                                ),
+                                 
+                                
+                                const SizedBox(height: 4),
+                                Text(
+                                  'Stone Stella', 
+                                  style: AppTypography.title5.copyWith(color: AppColors.textDark), 
+                                  maxLines: 1, 
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+// правая чатсьт
+                        Column(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text('Game: ', style: TextStyle(color: Colors.grey[600], fontSize: 11)),
+                                Text('Halo 5', style: TextStyle(color: AppColors.primary, fontSize: 13, fontWeight: FontWeight.bold)),
+                              ],
+                            ),
+                            const SizedBox(height: 6),
+                            Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text('Status: ', style: TextStyle(color: Colors.grey[600], fontSize: 11)),
+                                Text('Open', style: TextStyle(color: AppColors.primary, fontSize: 13, fontWeight: FontWeight.bold)),
+                              ],
+                            ),
+                          ],
+                        ),
+                        
+                      ], 
+                    ), 
+                  ), 
                   
                 ],
               ),
             ),
           ),
-          
         ],
       ),
     );

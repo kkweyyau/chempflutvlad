@@ -25,7 +25,7 @@ class AppTypography {
   );
   static const title5 = TextStyle(
     fontFamily: 'Red Hat Text',
-    fontSize: 6,
+    fontSize: 12,
     fontWeight: FontWeight.w700,
     letterSpacing: 0,
     height: 1,
