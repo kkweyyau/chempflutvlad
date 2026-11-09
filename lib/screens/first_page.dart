@@ -10,11 +10,11 @@ class FirstPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.primary, 
+      backgroundColor: AppColors.accent, 
       
       appBar: AppBar(
         toolbarHeight: 100,
-        backgroundColor: AppColors.primary,
+        backgroundColor: AppColors.accent,
         foregroundColor: AppColors.white,
         elevation: 0,
         titleSpacing: 30,
@@ -24,6 +24,7 @@ class FirstPage extends StatelessWidget {
             color: AppColors.white, 
           ),
         ),
+
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 30, bottom: 16),
@@ -44,7 +45,7 @@ class FirstPage extends StatelessWidget {
         children: [
           Container(
             width: double.infinity,
-            color: AppColors.primary,
+            color: AppColors.accent,
             padding: const EdgeInsets.only(left: 30, right: 30, bottom: 30),
             child: Container(
               height: 56,
@@ -55,12 +56,12 @@ class FirstPage extends StatelessWidget {
               child: Row(
                 children: [
                   const SizedBox(width: 20),
-                  Icon(Icons.search, color: AppColors.primary),
+                  Icon(Icons.search, color: AppColors.accent),
                   const SizedBox(width: 12),
                   Text(
                     'Search Combat',
                     style: AppTypography.searchText.copyWith(
-                      color: AppColors.primary,
+                      color: AppColors.accent,
                     ),
                   ),
                 ],
@@ -79,7 +80,7 @@ class FirstPage extends StatelessWidget {
                       Text(
                         'Trending this week',
                         style: AppTypography.title2ExtraBold.copyWith(
-                          color: AppColors.primary,
+                          color: AppColors.accent,
                         ),
                       ),
                       Text(
@@ -97,7 +98,7 @@ class FirstPage extends StatelessWidget {
                     width: double.infinity,
                     padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
                     decoration: BoxDecoration(
-                      border: Border.all(color: AppColors.primary),
+                      border: Border.all(color: AppColors.accent),
                       borderRadius: BorderRadius.circular(16),
                     ),
                     child: Row(
@@ -122,7 +123,7 @@ class FirstPage extends StatelessWidget {
                                       child: Container(
                                         padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                                         decoration: BoxDecoration(
-                                          color: AppColors.primary,
+                                          color: AppColors.accent,
                                           borderRadius: BorderRadius.circular(10),
                                         ),
                                         child: Text(
@@ -153,7 +154,7 @@ class FirstPage extends StatelessWidget {
                               child: Text(
                                 'VS',
                                 style: AppTypography.title2ExtraBold.copyWith(
-                                  color: AppColors.primary,
+                                  color: AppColors.accent,
                                   fontSize: 24,
                                 ),
                               ),
@@ -176,7 +177,7 @@ class FirstPage extends StatelessWidget {
                                       child: Container(
                                         padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                                         decoration: BoxDecoration(
-                                          color: AppColors.primary,
+                                          color: AppColors.accent,
                                           borderRadius: BorderRadius.circular(10),
                                         ),
                                         child: Text(
@@ -226,7 +227,7 @@ class FirstPage extends StatelessWidget {
                                       Text(
                                         'Halo 5', 
                                         style: AppTypography.captionMiniBold.copyWith(
-                                          color: AppColors.primary,
+                                          color: AppColors.accent,
                                         ),
                                       ),
                                     ],
@@ -245,7 +246,7 @@ class FirstPage extends StatelessWidget {
                                       Text(
                                         'Open', 
                                         style: AppTypography.captionMiniBold.copyWith(
-                                          color: AppColors.primary,
+                                          color: AppColors.accent,
                                         ),
                                       ),
                                     ],
@@ -262,11 +263,13 @@ class FirstPage extends StatelessWidget {
                                         maxLines: 1,
                                         overflow: TextOverflow.ellipsis,
                                       ),
+
                                       const SizedBox(height: 6),
+
                                       Text(
                                         '\$4,000', 
                                         style: AppTypography.pricePoppins.copyWith(
-                                          color: AppColors.primary,
+                                          color: AppColors.accent,
                                         ),
                                       ),
                                     ],
