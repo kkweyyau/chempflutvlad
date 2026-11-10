@@ -52,7 +52,7 @@ class OnBoardingPage2 extends StatelessWidget {
                 ],
               ),
             ),
-
+            
             const Spacer(),
 
             TextButton(
@@ -68,7 +68,7 @@ class OnBoardingPage2 extends StatelessWidget {
               ),
             ),
 
-            const SizedBox(height: 55),
+            const SizedBox(height: 20),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

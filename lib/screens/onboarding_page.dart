@@ -3,7 +3,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:qweqwe/classi/app_colors.dart';
 import 'package:qweqwe/app_router.dart';
 import 'package:qweqwe/classi/app_typography.dart';
-// import 'package:qweqwe/classi/app_typography.dart';
+//import 'package:qweqwe/classi/app_typography.dart';
 
 @RoutePage()
 class OnBoardingPage extends StatelessWidget {
