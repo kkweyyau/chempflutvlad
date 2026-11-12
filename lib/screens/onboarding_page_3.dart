@@ -17,15 +17,13 @@ class OnBoardingPage3 extends StatelessWidget {
           children: [
             const SizedBox(height: 90),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.38, 
+              height: MediaQuery.of(context).size.height * 0.38,
               child: Image.asset(
                 'assets/onboarding_3.png',
                 fit: BoxFit.contain,
               ),
             ),
-
             const SizedBox(height: 20),
-
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 32.0),
               child: Column(
@@ -33,29 +31,22 @@ class OnBoardingPage3 extends StatelessWidget {
                   Text(
                     'Text, Audio and\nVideo Chat',
                     textAlign: TextAlign.center,
-                    style: AppTypography.title2ExtraBold.copyWith(
+                    style: AppTypography.title1ExtraBold.copyWith(
                       color: AppColors.accent,
-                      fontSize: 28,
-                      height: 1.2,
-                      fontWeight: FontWeight.w900,
                     ),
                   ),
-                  const SizedBox(height: 45),
+                  const SizedBox(height: 16),
                   Text(
                     'Intuitive real life experience on\nmobile. Chat with fellow gamers\nbefore and after combat for\nfree!',
                     textAlign: TextAlign.center,
-                    style: AppTypography.captionMini.copyWith(
+                    style: AppTypography.headlineRegular.copyWith(
                       color: AppColors.textDark,
-                      fontSize: 16,
-                      height: 1.4,
                     ),
                   ),
                 ],
               ),
             ),
-
             const Spacer(),
-
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 32.0),
               child: SizedBox(
@@ -63,7 +54,7 @@ class OnBoardingPage3 extends StatelessWidget {
                 height: 56,
                 child: ElevatedButton(
                   onPressed: () {
-                    context.router.replaceAll([const CreateRoute()]); 
+                    context.router.replaceAll([const CreateRoute()]);
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.accent,
@@ -74,15 +65,13 @@ class OnBoardingPage3 extends StatelessWidget {
                   ),
                   child: Text(
                     "Let's Combat!",
-                    style: AppTypography.captionMiniBold.copyWith(
+                    style: AppTypography.headlineMedium.copyWith(
                       color: AppColors.white,
-                      fontSize: 16,
                     ),
                   ),
                 ),
               ),
             ),
-
             const SizedBox(height: 30),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -94,7 +83,6 @@ class OnBoardingPage3 extends StatelessWidget {
                 _buildDot(isActive: true),
               ],
             ),
-            
             const SizedBox(height: 40),
           ],
         ),
@@ -108,9 +96,7 @@ class OnBoardingPage3 extends StatelessWidget {
       height: 8,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        color: isActive 
-            ? AppColors.accent 
-            : AppColors.accentInactive,
+        color: isActive ? AppColors.accent : AppColors.accentInactive,
       ),
     );
   }

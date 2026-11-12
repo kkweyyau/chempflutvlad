@@ -3,12 +3,10 @@ import 'package:auto_route/auto_route.dart';
 import 'package:qweqwe/classi/app_colors.dart';
 import 'package:qweqwe/app_router.dart';
 import 'package:qweqwe/classi/app_typography.dart';
-//import 'package:qweqwe/classi/app_typography.dart';
 
 @RoutePage()
 class OnBoardingPage extends StatelessWidget {
   const OnBoardingPage({super.key});
-
 
   @override
   Widget build(BuildContext context) {
@@ -24,53 +22,42 @@ class OnBoardingPage extends StatelessWidget {
                 fit: BoxFit.contain,
               ),
             ),
-
             const SizedBox(height: 24),
-
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 32.0),
               child: Column(
                 children: [
-                  Text('Get Paid! Playing\nVideo Game',
-                  textAlign: TextAlign.center,
-                  style: AppTypography.title2ExtraBold.copyWith(
-                    color: AppColors.accent,
-                    fontSize: 28,
-                    height: 1.1,
-                    fontWeight: FontWeight.w900,
-                  ),
+                  Text(
+                    'Get Paid! Playing\nVideo Game',
+                    textAlign: TextAlign.center,
+                    style: AppTypography.title1ExtraBold.copyWith(
+                      color: AppColors.accent,
+                    ),
                   ),
                   const SizedBox(height: 16),
                   Text(
                     'Earn points and real cash when\nyou win a battle with no delay\nin cashning out',
                     textAlign: TextAlign.center,
-                    style: AppTypography.captionMini.copyWith(
+                    style: AppTypography.headlineRegular.copyWith(
                       color: AppColors.textDark,
-                      fontSize: 16,
-                      height: 1.5,
-                      
                     ),
                   ),
                 ],
-              ),  
+              ),
             ),
             const Spacer(),
-
             TextButton(
               onPressed: () {
                 context.router.replaceAll([const OnBoardingRoute2()]);
               },
               child: Text(
                 'Skip',
-                style: AppTypography.captionMiniBold.copyWith(
+                style: AppTypography.captionSemiBold.copyWith(
                   color: AppColors.accent,
-                  fontSize: 14,
                 ),
               ),
             ),
-
             const SizedBox(height: 20),
-
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -83,19 +70,18 @@ class OnBoardingPage extends StatelessWidget {
             ),
             const SizedBox(height: 40),
           ],
-        )
         ),
+      ),
     );
   }
+
   Widget _buildDot({required bool isActive}) {
     return Container(
       width: 8,
       height: 8,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        color: isActive
-            ? AppColors.accent
-            : AppColors.accentInactive,
+        color: isActive ? AppColors.accent : AppColors.accentInactive,
       ),
     );
   }

@@ -16,15 +16,13 @@ class OnBoardingPage2 extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.45, 
+              height: MediaQuery.of(context).size.height * 0.45,
               child: Image.asset(
                 'assets/onboarding_2.png',
                 fit: BoxFit.contain,
               ),
             ),
-
             const SizedBox(height: 24),
-
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 32.0),
               child: Column(
@@ -32,44 +30,34 @@ class OnBoardingPage2 extends StatelessWidget {
                   Text(
                     'Schedule Games\nWith Friends',
                     textAlign: TextAlign.center,
-                    style: AppTypography.title2ExtraBold.copyWith(
+                    style: AppTypography.title1ExtraBold.copyWith(
                       color: AppColors.accent,
-                      fontSize: 28,
-                      height: 1.2,
-                      fontWeight: FontWeight.w900,
                     ),
                   ),
-                  const SizedBox(height: 50),
+                  const SizedBox(height: 16),
                   Text(
                     'Easily create an upcoming\nevent and get ready for battle.\nYeah! real combat fella.',
                     textAlign: TextAlign.center,
-                    style: AppTypography.captionMini.copyWith(
+                    style: AppTypography.headlineRegular.copyWith(
                       color: AppColors.textDark,
-                      fontSize: 18,
-                      height: 1.5,
                     ),
                   ),
                 ],
               ),
             ),
-            
             const Spacer(),
-
             TextButton(
               onPressed: () {
-                context.router.replaceAll([const OnBoardingRoute3()]); 
+                context.router.replaceAll([const OnBoardingRoute3()]);
               },
               child: Text(
                 'Skip',
-                style: AppTypography.captionMiniBold.copyWith(
+                style: AppTypography.captionSemiBold.copyWith(
                   color: AppColors.accent,
-                  fontSize: 14,
                 ),
               ),
             ),
-
             const SizedBox(height: 20),
-
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -80,7 +68,6 @@ class OnBoardingPage2 extends StatelessWidget {
                 _buildDot(isActive: false),
               ],
             ),
-            
             const SizedBox(height: 40),
           ],
         ),
@@ -94,9 +81,7 @@ class OnBoardingPage2 extends StatelessWidget {
       height: 8,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        color: isActive 
-            ? AppColors.accent 
-            : AppColors.accentInactive,
+        color: isActive ? AppColors.accent : AppColors.accentInactive,
       ),
     );
   }

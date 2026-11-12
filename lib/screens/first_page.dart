@@ -24,7 +24,6 @@ class FirstPage extends StatelessWidget {
             color: AppColors.white, 
           ),
         ),
-
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 30, bottom: 16),
@@ -60,7 +59,7 @@ class FirstPage extends StatelessWidget {
                   const SizedBox(width: 12),
                   Text(
                     'Search Combat',
-                    style: AppTypography.searchText.copyWith(
+                    style: AppTypography.textRegular.copyWith(
                       color: AppColors.accent,
                     ),
                   ),
@@ -85,7 +84,7 @@ class FirstPage extends StatelessWidget {
                       ),
                       Text(
                         'View All >>',
-                        style: AppTypography.caption2.copyWith(
+                        style: AppTypography.caption2Regular.copyWith(
                           color: AppColors.textDark,
                         ),
                       ),
@@ -128,7 +127,7 @@ class FirstPage extends StatelessWidget {
                                         ),
                                         child: Text(
                                           'Host', 
-                                          style: AppTypography.captionMini.copyWith(
+                                          style: AppTypography.caption2Bold.copyWith(
                                             color: AppColors.white,
                                             fontSize: 8,
                                           ),
@@ -140,7 +139,7 @@ class FirstPage extends StatelessWidget {
                                 const SizedBox(height: 6),
                                 Text(
                                   'Scott Brown', 
-                                  style: AppTypography.captionMiniBold.copyWith(
+                                  style: AppTypography.caption2Bold.copyWith(
                                     color: AppColors.textDark,
                                   ), 
                                   maxLines: 1, 
@@ -153,9 +152,8 @@ class FirstPage extends StatelessWidget {
                               padding: const EdgeInsets.symmetric(horizontal: 12),
                               child: Text(
                                 'VS',
-                                style: AppTypography.title2ExtraBold.copyWith(
+                                style: AppTypography.title1ExtraBold.copyWith(
                                   color: AppColors.accent,
-                                  fontSize: 24,
                                 ),
                               ),
                             ),
@@ -182,7 +180,7 @@ class FirstPage extends StatelessWidget {
                                         ),
                                         child: Text(
                                           'Guest', 
-                                          style: AppTypography.captionMini.copyWith(
+                                          style: AppTypography.caption2Bold.copyWith(
                                             color: AppColors.white,
                                             fontSize: 8,
                                           ),
@@ -196,7 +194,7 @@ class FirstPage extends StatelessWidget {
 
                                 Text(
                                   'Stone Stella', 
-                                  style: AppTypography.captionMiniBold.copyWith(
+                                  style: AppTypography.caption2Bold.copyWith(
                                     color: AppColors.textDark,
                                   ), 
                                   maxLines: 1, 
@@ -219,14 +217,16 @@ class FirstPage extends StatelessWidget {
                                     children: [
                                       Text(
                                         'Game Name:', 
-                                        style: AppTypography.captionMini, 
+                                        style: AppTypography.caption2Regular.copyWith(
+                                          color: AppColors.textDark,
+                                        ), 
                                         maxLines: 1, 
                                         overflow: TextOverflow.ellipsis,
                                       ),
                                       const SizedBox(height: 6),
                                       Text(
                                         'Halo 5', 
-                                        style: AppTypography.captionMiniBold.copyWith(
+                                        style: AppTypography.caption2Bold.copyWith(
                                           color: AppColors.accent,
                                         ),
                                       ),
@@ -240,12 +240,14 @@ class FirstPage extends StatelessWidget {
                                     children: [
                                       Text(
                                         'Status:', 
-                                        style: AppTypography.captionMini,
+                                        style: AppTypography.caption2Regular.copyWith(
+                                          color: AppColors.textDark,
+                                        ),
                                       ),
                                       const SizedBox(height: 6),
                                       Text(
                                         'Open', 
-                                        style: AppTypography.captionMiniBold.copyWith(
+                                        style: AppTypography.caption2Bold.copyWith(
                                           color: AppColors.accent,
                                         ),
                                       ),
@@ -259,7 +261,9 @@ class FirstPage extends StatelessWidget {
                                     children: [
                                       Text(
                                         'Winning Price:', 
-                                        style: AppTypography.captionMini,
+                                        style: AppTypography.caption2Regular.copyWith(
+                                          color: AppColors.textDark,
+                                        ),
                                         maxLines: 1,
                                         overflow: TextOverflow.ellipsis,
                                       ),
@@ -268,7 +272,7 @@ class FirstPage extends StatelessWidget {
 
                                       Text(
                                         '\$4,000', 
-                                        style: AppTypography.pricePoppins.copyWith(
+                                        style: AppTypography.caption2Bold.copyWith(
                                           color: AppColors.accent,
                                         ),
                                       ),

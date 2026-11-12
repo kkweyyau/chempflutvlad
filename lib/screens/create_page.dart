@@ -34,9 +34,8 @@ class CreatePage extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 52.0),
                 child: Text(
                   'Create Account',
-                  style: AppTypography.title2ExtraBold.copyWith(
+                  style: AppTypography.title1ExtraBold.copyWith(
                     color: AppColors.accent,
-                    fontSize: 28,
                   ),
                 ),
               ),
@@ -46,10 +45,8 @@ class CreatePage extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 52.0),
                 child: Text(
                   'Hi, kindly fill in the form to proceed\ncombat',
-                  style: AppTypography.captionMini.copyWith(
+                  style: AppTypography.caption2Regular.copyWith(
                     color: AppColors.textDark,
-                    fontSize: 12,
-                    height: 1.4,
                   ),
                 ),
               ),
@@ -62,12 +59,12 @@ class CreatePage extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(bottom: 16.0),
                       child: TextFormField(
-                        style: const TextStyle(fontSize: 14),
-                        decoration: const InputDecoration(
+                        style: AppTypography.captionRegular.copyWith(color: AppColors.textDark),
+                        decoration: InputDecoration(
                           labelText: 'Full Name',
-                          labelStyle: TextStyle(color: Colors.grey, fontSize: 14),
-                          enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
-                          focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
+                          labelStyle: AppTypography.captionRegular.copyWith(color: Colors.grey),
+                          enabledBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
+                          focusedBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
                         ),
                       ),
                     ),
@@ -75,12 +72,12 @@ class CreatePage extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(bottom: 16.0),
                       child: TextFormField(
-                        style: const TextStyle(fontSize: 14),
-                        decoration: const InputDecoration(
+                        style: AppTypography.captionRegular.copyWith(color: AppColors.textDark),
+                        decoration: InputDecoration(
                           labelText: 'User Name',
-                          labelStyle: TextStyle(color: Colors.grey, fontSize: 14),
-                          enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
-                          focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
+                          labelStyle: AppTypography.captionRegular.copyWith(color: Colors.grey),
+                          enabledBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
+                          focusedBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
                         ),
                       ),
                     ),
@@ -89,15 +86,15 @@ class CreatePage extends StatelessWidget {
                       padding: const EdgeInsets.only(bottom: 16.0),
                       child: TextFormField(
                         keyboardType: TextInputType.phone,
-                        style: const TextStyle(fontSize: 14),
+                        style: AppTypography.captionRegular.copyWith(color: AppColors.textDark),
                         decoration: InputDecoration(
                           hintText: 'Your Phone',
-                          hintStyle: TextStyle(color: Colors.grey[600], fontSize: 14),
+                          hintStyle: AppTypography.captionRegular.copyWith(color: Colors.grey[600]),
                           prefixIcon: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               const SizedBox(width: 10),
-                              const Text('+234', style: TextStyle(color: AppColors.textDark, fontSize: 14)),
+                              Text('+234', style: AppTypography.captionRegular.copyWith(color: AppColors.textDark)),
                               const SizedBox(width: 10),
                               Container(width: 1, height: 20, color: AppColors.accentInactive),
                               const SizedBox(width: 10),
@@ -112,12 +109,12 @@ class CreatePage extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(bottom: 16.0),
                       child: TextFormField(
-                        style: const TextStyle(fontSize: 14),
-                        decoration: const InputDecoration(
+                        style: AppTypography.captionRegular.copyWith(color: AppColors.textDark),
+                        decoration: InputDecoration(
                           labelText: 'Email',
-                          labelStyle: TextStyle(color: Colors.grey, fontSize: 14),
-                          enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
-                          focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
+                          labelStyle: AppTypography.captionRegular.copyWith(color: Colors.grey),
+                          enabledBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
+                          focusedBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
                         ),
                       ),
                     ),
@@ -126,13 +123,13 @@ class CreatePage extends StatelessWidget {
                       padding: const EdgeInsets.only(bottom: 16.0),
                       child: TextFormField(
                         obscureText: true,
-                        style: const TextStyle(fontSize: 14),
-                        decoration: const InputDecoration(
+                        style: AppTypography.captionRegular.copyWith(color: AppColors.textDark),
+                        decoration: InputDecoration(
                           labelText: 'Password',
-                          labelStyle: TextStyle(color: Colors.grey, fontSize: 14),
-                          suffixIcon: Icon(Icons.visibility_off, color: AppColors.accentInactive, size: 20),
-                          enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
-                          focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
+                          labelStyle: AppTypography.captionRegular.copyWith(color: Colors.grey),
+                          suffixIcon: const Icon(Icons.visibility_off, color: AppColors.accentInactive, size: 20),
+                          enabledBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
+                          focusedBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
                         ),
                       ),
                     ),
@@ -141,13 +138,13 @@ class CreatePage extends StatelessWidget {
                       padding: const EdgeInsets.only(bottom: 16.0),
                       child: TextFormField(
                         obscureText: true,
-                        style: const TextStyle(fontSize: 14),
-                        decoration: const InputDecoration(
+                        style: AppTypography.captionRegular.copyWith(color: AppColors.textDark),
+                        decoration: InputDecoration(
                           labelText: 'Confirm Password',
-                          labelStyle: TextStyle(color: Colors.grey, fontSize: 14),
-                          suffixIcon: Icon(Icons.visibility_off, color: AppColors.accentInactive, size: 20),
-                          enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
-                          focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
+                          labelStyle: AppTypography.captionRegular.copyWith(color: Colors.grey),
+                          suffixIcon: const Icon(Icons.visibility_off, color: AppColors.accentInactive, size: 20),
+                          enabledBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
+                          focusedBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
                         ),
                       ),
                     ),
@@ -173,9 +170,8 @@ class CreatePage extends StatelessWidget {
                     ),
                     child: Text(
                       'Create Account',
-                      style: AppTypography.captionMiniBold.copyWith(
+                      style: AppTypography.headlineMedium.copyWith(
                         color: AppColors.white,
-                        fontSize: 16,
                       ),
                     ),
                   ),
@@ -189,9 +185,8 @@ class CreatePage extends StatelessWidget {
                   children: [
                     Text(
                       'Connect With:',
-                      style: AppTypography.captionMiniBold.copyWith(
+                      style: AppTypography.caption2Bold.copyWith(
                         color: AppColors.accent,
-                        fontSize: 12,
                       ),
                     ),
                     const SizedBox(height: 12),
@@ -232,9 +227,8 @@ class CreatePage extends StatelessWidget {
                   children: [
                     Text(
                       'Already have an account?',
-                      style: AppTypography.captionMini.copyWith(
+                      style: AppTypography.caption2Regular.copyWith(
                         color: AppColors.textDark,
-                        fontSize: 12,
                       ),
                     ),
                     TextButton(
@@ -246,9 +240,8 @@ class CreatePage extends StatelessWidget {
                       ),
                       child: Text(
                         'Login',
-                        style: AppTypography.captionMiniBold.copyWith(
+                        style: AppTypography.caption2Bold.copyWith(
                           color: AppColors.accent,
-                          fontSize: 12,
                         ),
                       ),
                     ),
