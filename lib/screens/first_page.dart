@@ -15,7 +15,7 @@ class FirstPage extends StatelessWidget {
       appBar: AppBar(
         toolbarHeight: 100,
         backgroundColor: AppColors.accent,
-        foregroundColor: AppColors.white,
+        foregroundColor: AppColors.background,
         elevation: 0,
         titleSpacing: 30,
         title: Text(

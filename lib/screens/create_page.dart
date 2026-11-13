@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:qweqwe/classi/app_colors.dart';
 import 'package:qweqwe/classi/app_typography.dart'; 
+import 'package:qweqwe/app_router.dart';
 
 @RoutePage()
 class CreatePage extends StatelessWidget {
@@ -10,7 +11,7 @@ class CreatePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.white,
+      backgroundColor: AppColors.background,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -242,7 +243,9 @@ class CreatePage extends StatelessWidget {
                     ),
 
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        context.router.push(const LoginRoute());
+                      },
                       style: TextButton.styleFrom(
                         padding: EdgeInsets.zero,
                         minimumSize: Size.zero,
