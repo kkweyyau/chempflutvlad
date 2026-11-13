@@ -25,7 +25,7 @@ class LoginPage extends StatelessWidget {
               ),
               
               Padding(
-                padding: const EdgeInsets.only(left: 52.0, top: 41 ),
+                padding: const EdgeInsets.only(left: 52.0, top: 41),
                 child: Text(
                   'Welcome Back!',
                   style: AppTypography.title1ExtraBold.copyWith(
@@ -49,7 +49,7 @@ class LoginPage extends StatelessWidget {
                 child: Column(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(bottom: 24),
+                      padding: const EdgeInsets.only(bottom: 10),
                       child: TextField(
                         style: AppTypography.captionRegular.copyWith(color: AppColors.black),
                         decoration: InputDecoration(
@@ -90,11 +90,9 @@ class LoginPage extends StatelessWidget {
 
               const SizedBox(height: 27),
 
-              // КНОПКА
-              Padding(
-                padding: const EdgeInsets.only(left: 52.0, right: 52.0),
+              Center(
                 child: SizedBox(
-                  width: double.infinity,
+                  width: 224,
                   height: 58,
                   child: ElevatedButton(
                     onPressed: () {},
@@ -102,22 +100,22 @@ class LoginPage extends StatelessWidget {
                       backgroundColor: AppColors.accent,
                       elevation: 0,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(25),
+                        borderRadius: BorderRadius.circular(29),
                       ),
                     ),
                     child: Text(
                       'Let’s Combat!',
                       style: AppTypography.headlineMedium.copyWith(
                         color: AppColors.white,
+                        fontWeight: FontWeight.w700,
                       ),
                     ),
                   ),
                 ),
               ),
               
-              const SizedBox(height: 23), // Уменьшили отступ
+              const SizedBox(height: 35),
 
-              // СОЦСЕТИ
               Center(
                 child: Column(
                   children: [
@@ -127,9 +125,7 @@ class LoginPage extends StatelessWidget {
                         color: AppColors.accent,
                       ),
                     ),
-
                     const SizedBox(height: 7),
-
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -149,7 +145,8 @@ class LoginPage extends StatelessWidget {
                           height: 40,
                           decoration: const BoxDecoration(
                             color: Colors.blue,
-                            shape: BoxShape.circle),
+                            shape: BoxShape.circle,
+                          ),
                           alignment: Alignment.center,
                           child: const Text('f', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16)),
                         ),
@@ -159,7 +156,7 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 18),
+              const SizedBox(height: 24),
 
               Center(
                 child: Column(
@@ -172,13 +169,15 @@ class LoginPage extends StatelessWidget {
                     ),
                     
                     InkWell(
-                      onTap: (){context.router.push(const CreateRoute());} ,
+                      onTap: () {
+                        context.router.push(const CreateRoute());
+                      },
                       child: Padding(
                         padding: const EdgeInsets.only(top: 4),
-                      child: Text(
-                        'Create Account',
-                        style: AppTypography.caption2Bold.copyWith(
-                          color: AppColors.accent,
+                        child: Text(
+                          'Create Account',
+                          style: AppTypography.caption2Bold.copyWith(
+                            color: AppColors.accent,
                           ),
                         ),
                       ),

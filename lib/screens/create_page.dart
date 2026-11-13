@@ -93,7 +93,7 @@ class CreatePage extends StatelessWidget {
                         style: AppTypography.captionRegular.copyWith(color: AppColors.black),
                         decoration: InputDecoration(
                           hintText: 'Your Phone',
-                          hintStyle: AppTypography.captionRegular.copyWith(color: Colors.grey[600]),
+                          hintStyle: AppTypography.captionRegular.copyWith(color: AppColors.grey),
                           prefixIcon: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
@@ -116,7 +116,7 @@ class CreatePage extends StatelessWidget {
                         style: AppTypography.captionRegular.copyWith(color: AppColors.black),
                         decoration: InputDecoration(
                           labelText: 'Email',
-                          labelStyle: AppTypography.captionRegular.copyWith(color: Colors.grey),
+                          labelStyle: AppTypography.captionRegular.copyWith(color: AppColors.grey),
                           enabledBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
                           focusedBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppColors.grey)),
                         ),
@@ -205,11 +205,11 @@ class CreatePage extends StatelessWidget {
                           width: 40,
                           height: 40,
                           decoration: const BoxDecoration(
-                            color: Colors.redAccent,
+                            color: AppColors.error,
                             shape: BoxShape.circle,
                           ),
                           alignment: Alignment.center,
-                          child: const Text('G', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18)),
+                          child: const Text('G', style: TextStyle(color: AppColors.white, fontWeight: FontWeight.bold, fontSize: 18)),
                         ),
 
                         const SizedBox(width: 16),
@@ -222,7 +222,7 @@ class CreatePage extends StatelessWidget {
                             shape: BoxShape.circle,
                           ),
                           alignment: Alignment.center,
-                          child: const Text('f', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18)),
+                          child: const Text('f', style: TextStyle(color: AppColors.white, fontWeight: FontWeight.bold, fontSize: 18)),
                         ),
                       ],
                     ),
