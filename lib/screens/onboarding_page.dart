@@ -39,7 +39,7 @@ class OnBoardingPage extends StatelessWidget {
                     'Earn points and real cash when\nyou win a battle with no delay\nin cashning out',
                     textAlign: TextAlign.center,
                     style: AppTypography.headlineRegular.copyWith(
-                      color: AppColors.textDark,
+                      color: AppColors.black,
                     ),
                   ),
                 ],

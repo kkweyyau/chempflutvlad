@@ -40,7 +40,7 @@ class OnBoardingPage3 extends StatelessWidget {
                     'Intuitive real life experience on\nmobile. Chat with fellow gamers\nbefore and after combat for\nfree!',
                     textAlign: TextAlign.center,
                     style: AppTypography.headlineRegular.copyWith(
-                      color: AppColors.textDark,
+                      color: AppColors.black,
                     ),
                   ),
                 ],

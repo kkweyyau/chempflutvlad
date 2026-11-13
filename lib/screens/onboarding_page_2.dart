@@ -39,7 +39,7 @@ class OnBoardingPage2 extends StatelessWidget {
                     'Easily create an upcoming\nevent and get ready for battle.\nYeah! real combat fella.',
                     textAlign: TextAlign.center,
                     style: AppTypography.headlineRegular.copyWith(
-                      color: AppColors.textDark,
+                      color: AppColors.black,
                     ),
                   ),
                 ],
