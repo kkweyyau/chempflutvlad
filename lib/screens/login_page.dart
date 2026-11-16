@@ -28,7 +28,7 @@ class LoginPage extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 52.0, top: 41),
                 child: Text(
                   'Welcome Back!',
-                  style: AppTypography.title1ExtraBold.copyWith(
+                  style: AppTypography.redHeadText.copyWith(
                     color: AppColors.accent,
                   ),
                 ),
@@ -38,8 +38,9 @@ class LoginPage extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 52.0, top: 23),
                 child: Text(
                   'Hi, Kindly login to continue battle',
-                  style: AppTypography.caption2Regular.copyWith(
+                  style: AppTypography.redHeadUnderText.copyWith(
                     color: AppColors.black,
+                    fontSize: 14,
                   ),
                 ),
               ),
@@ -51,10 +52,10 @@ class LoginPage extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(bottom: 10),
                       child: TextField(
-                        style: AppTypography.captionRegular.copyWith(color: AppColors.black),
+                        style: AppTypography.caption.copyWith(color: AppColors.black),
                         decoration: InputDecoration(
                           labelText: 'Email',
-                          labelStyle: AppTypography.captionRegular.copyWith(color: AppColors.black),
+                          labelStyle: AppTypography.caption.copyWith(color: AppColors.black),
                           enabledBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
                           focusedBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
                         ),
@@ -63,10 +64,10 @@ class LoginPage extends StatelessWidget {
 
                     TextField(
                       obscureText: true,
-                      style: AppTypography.captionRegular.copyWith(color: AppColors.black),
+                      style: AppTypography.caption.copyWith(color: AppColors.black),
                       decoration: InputDecoration(
                         labelText: 'Password',
-                        labelStyle: AppTypography.captionRegular.copyWith(color: AppColors.black),
+                        labelStyle: AppTypography.caption.copyWith(color: AppColors.black),
                         suffixIcon: const Icon(Icons.visibility_off, color: AppColors.accentInactive, size: 20),
                         enabledBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
                         focusedBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
@@ -78,9 +79,8 @@ class LoginPage extends StatelessWidget {
                       alignment: Alignment.centerRight,
                       child: Text(
                         'Forgot Password?',
-                        style: AppTypography.caption2Regular.copyWith(
+                        style: AppTypography.caption2.copyWith(
                           color: AppColors.black,
-                          fontSize: 12,
                         ),
                       ),
                     ),
@@ -105,9 +105,8 @@ class LoginPage extends StatelessWidget {
                     ),
                     child: Text(
                       'Let’s Combat!',
-                      style: AppTypography.headlineMedium.copyWith(
+                      style: AppTypography.letsCombat.copyWith(
                         color: AppColors.white,
-                        fontWeight: FontWeight.w700,
                       ),
                     ),
                   ),
@@ -121,8 +120,9 @@ class LoginPage extends StatelessWidget {
                   children: [
                     Text(
                       'Connect With:',
-                      style: AppTypography.caption2Bold.copyWith(
+                      style: AppTypography.redHeadText.copyWith(
                         color: AppColors.accent,
+                        fontSize: 12,
                       ),
                     ),
                     const SizedBox(height: 7),
@@ -163,8 +163,9 @@ class LoginPage extends StatelessWidget {
                   children: [
                     Text(
                       'Don’t have an account? ',
-                      style: AppTypography.caption2Regular.copyWith(
+                      style: AppTypography.redHeadUnderText.copyWith(
                         color: AppColors.black,
+                        fontSize: 12,
                       ),
                     ),
                     

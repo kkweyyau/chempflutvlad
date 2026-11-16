@@ -14,9 +14,11 @@ class OnBoardingPage2 extends StatelessWidget {
       backgroundColor: AppColors.background,
       body: SafeArea(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
+            const SizedBox(height: 40),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.45,
+              height: MediaQuery.of(context).size.height * 0.4,
               child: Image.asset(
                 'assets/onboarding_2.png',
                 fit: BoxFit.contain,
@@ -30,16 +32,19 @@ class OnBoardingPage2 extends StatelessWidget {
                   Text(
                     'Schedule Games\nWith Friends',
                     textAlign: TextAlign.center,
-                    style: AppTypography.title1ExtraBold.copyWith(
+                    style: AppTypography.redHeadText.copyWith(
                       color: AppColors.accent,
                     ),
                   ),
-                  const SizedBox(height: 16),
-                  Text(
-                    'Easily create an upcoming\nevent and get ready for battle.\nYeah! real combat fella.',
-                    textAlign: TextAlign.center,
-                    style: AppTypography.headlineRegular.copyWith(
-                      color: AppColors.black,
+                  const SizedBox(height: 20),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 36),
+                    child: Text(
+                      'Easily create an upcoming\nevent and get ready for battle.\nYeah! real combat fella.',
+                      textAlign: TextAlign.center,
+                      style: AppTypography.redHeadUnderText.copyWith(
+                        color: AppColors.black,
+                      ),
                     ),
                   ),
                 ],
@@ -52,21 +57,25 @@ class OnBoardingPage2 extends StatelessWidget {
               },
               child: Text(
                 'Skip',
-                style: AppTypography.captionSemiBold.copyWith(
+                style: AppTypography.redHeadSkip.copyWith(
                   color: AppColors.accent,
+                  decoration: TextDecoration.underline,
                 ),
               ),
             ),
-            const SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                _buildDot(isActive: false),
-                const SizedBox(width: 8),
-                _buildDot(isActive: true),
-                const SizedBox(width: 8),
-                _buildDot(isActive: false),
-              ],
+            // const SizedBox(height: 10),
+            Padding(
+              padding: const EdgeInsets.only(top: 71),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  _buildDot(isActive: false),
+                  const SizedBox(width: 10),
+                  _buildDot(isActive: true),
+                  const SizedBox(width: 10),
+                  _buildDot(isActive: false),
+                ],
+              ),
             ),
             const SizedBox(height: 40),
           ],
@@ -77,8 +86,8 @@ class OnBoardingPage2 extends StatelessWidget {
 
   Widget _buildDot({required bool isActive}) {
     return Container(
-      width: 8,
-      height: 8,
+      width: 10,
+      height: 10,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         color: isActive ? AppColors.accent : AppColors.accentInactive,

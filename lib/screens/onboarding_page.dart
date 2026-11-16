@@ -14,15 +14,21 @@ class OnBoardingPage extends StatelessWidget {
       backgroundColor: AppColors.background,
       body: SafeArea(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.45,
-              child: Image.asset(
-                'assets/onboarding_1.png',
-                fit: BoxFit.contain,
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0, top: 80),
+              child: SizedBox(
+                height: MediaQuery.of(context).size.height * 0.4,
+                child: Image.asset(
+                  'assets/onboarding_1.png',
+                  fit: BoxFit.contain,
+                ),
               ),
             ),
-            const SizedBox(height: 24),
+            
+            const SizedBox(height: 30),
+            
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 32.0),
               child: Column(
@@ -30,43 +36,51 @@ class OnBoardingPage extends StatelessWidget {
                   Text(
                     'Get Paid! Playing\nVideo Game',
                     textAlign: TextAlign.center,
-                    style: AppTypography.title1ExtraBold.copyWith(
+                    style: AppTypography.redHeadText.copyWith(
                       color: AppColors.accent,
                     ),
                   ),
-                  const SizedBox(height: 16),
+                  
+                  const SizedBox(height: 36), 
+                  
                   Text(
                     'Earn points and real cash when\nyou win a battle with no delay\nin cashning out',
                     textAlign: TextAlign.center,
-                    style: AppTypography.headlineRegular.copyWith(
+                    style: AppTypography.redHeadUnderText.copyWith(
                       color: AppColors.black,
                     ),
                   ),
                 ],
               ),
             ),
+            
             const Spacer(),
+            
             TextButton(
               onPressed: () {
                 context.router.replaceAll([const OnBoardingRoute2()]);
               },
               child: Text(
                 'Skip',
-                style: AppTypography.captionSemiBold.copyWith(
+                style: AppTypography.redHeadSkip.copyWith(
                   color: AppColors.accent,
+                  decoration: TextDecoration.underline,
                 ),
               ),
             ),
-            const SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                _buildDot(isActive: true),
-                const SizedBox(width: 8),
-                _buildDot(isActive: false),
-                const SizedBox(width: 8),
-                _buildDot(isActive: false),
-              ],
+            
+            Padding(
+              padding: const EdgeInsets.only(top: 71),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  _buildDot(isActive: true),
+                  const SizedBox(width: 10),
+                  _buildDot(isActive: false),
+                  const SizedBox(width: 10),
+                  _buildDot(isActive: false),
+                ],
+              ),
             ),
             const SizedBox(height: 40),
           ],
@@ -77,8 +91,8 @@ class OnBoardingPage extends StatelessWidget {
 
   Widget _buildDot({required bool isActive}) {
     return Container(
-      width: 8,
-      height: 8,
+      width: 10,
+      height: 10,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         color: isActive ? AppColors.accent : AppColors.accentInactive,

@@ -1,49 +1,50 @@
 import 'package:flutter/material.dart';
 
 class AppTypography {
+  AppTypography._();
 
-  static const title1SemiBold = TextStyle(
-    fontFamily: 'Poppins',
+  static const title1 = TextStyle(
+    fontFamily: 'Red Hat Text',
     fontSize: 24,
     fontWeight: FontWeight.w600,
     height: 1.16,
     letterSpacing: 0.33,
   );
 
-  static const title1ExtraBold = TextStyle(
-    fontFamily: 'Poppins',
+  static const title1Extra = TextStyle(
+    fontFamily: 'Red Hat Text',
     fontSize: 24,
-    fontWeight: FontWeight.w800,
+    fontWeight: FontWeight.w700,
     height: 1.16,
     letterSpacing: 0.33,
   );
 
-  static const title2Regular = TextStyle(
-    fontFamily: 'Poppins',
+  static const title2 = TextStyle(
+    fontFamily: 'Red Hat Text',
     fontSize: 20,
     fontWeight: FontWeight.w400,
     height: 1.4,
     letterSpacing: 0.38,
   );
 
-  static const title2SemiBold = TextStyle(
-    fontFamily: 'Poppins',
+  static const title2Semibold = TextStyle(
+    fontFamily: 'Red Hat Text',
     fontSize: 20,
     fontWeight: FontWeight.w600,
     height: 1.4,
     letterSpacing: 0.38,
   );
 
-  static const title2ExtraBold = TextStyle(
-    fontFamily: 'Poppins',
+  static const title2Extrabold = TextStyle(
+    fontFamily: 'Red Hat Text',
     fontSize: 20,
-    fontWeight: FontWeight.w800,
+    fontWeight: FontWeight.w700,
     height: 1.4,
     letterSpacing: 0.38,
   );
 
-  static const title3Regular = TextStyle(
-    fontFamily: 'Poppins',
+  static const title3 = TextStyle(
+    fontFamily: 'Red Hat Text',
     fontSize: 17,
     fontWeight: FontWeight.w400,
     height: 1.41,
@@ -51,23 +52,23 @@ class AppTypography {
   );
 
   static const title3Medium = TextStyle(
-    fontFamily: 'Poppins',
+    fontFamily: 'Red Hat Text',
     fontSize: 17,
     fontWeight: FontWeight.w500,
     height: 1.41,
     letterSpacing: 0,
   );
 
-  static const title3SemiBold = TextStyle(
-    fontFamily: 'Poppins',
+  static const title3Semibold = TextStyle(
+    fontFamily: 'Red Hat Text',
     fontSize: 17,
     fontWeight: FontWeight.w600,
     height: 1.41,
     letterSpacing: 0,
   );
 
-  static const headlineRegular = TextStyle(
-    fontFamily: 'Poppins',
+  static const headline = TextStyle(
+    fontFamily: 'Red Hat Text',
     fontSize: 16,
     fontWeight: FontWeight.w400,
     height: 1.25,
@@ -75,15 +76,15 @@ class AppTypography {
   );
 
   static const headlineMedium = TextStyle(
-    fontFamily: 'Poppins',
+    fontFamily: 'Red Hat Text',
     fontSize: 16,
     fontWeight: FontWeight.w500,
     height: 1.25,
     letterSpacing: -0.32,
   );
 
-  static const textRegular = TextStyle(
-    fontFamily: 'Poppins',
+  static const text = TextStyle(
+    fontFamily: 'Red Hat Text',
     fontSize: 15,
     fontWeight: FontWeight.w400,
     height: 1.33,
@@ -91,31 +92,31 @@ class AppTypography {
   );
 
   static const textMedium = TextStyle(
-    fontFamily: 'Poppins',
+    fontFamily: 'Red Hat Text',
     fontSize: 15,
     fontWeight: FontWeight.w400,
     height: 1.33,
     letterSpacing: 0,
   );
 
-  static const captionRegular = TextStyle(
-    fontFamily: 'Poppins',
+  static const caption = TextStyle(
+    fontFamily: 'Red Hat Text',
     fontSize: 14,
     fontWeight: FontWeight.w400,
     height: 1.42,
     letterSpacing: 0,
   );
 
-  static const captionSemiBold = TextStyle(
-    fontFamily: 'Poppins',
+  static const captionSemibold = TextStyle(
+    fontFamily: 'Red Hat Text',
     fontSize: 14,
     fontWeight: FontWeight.w600,
     height: 1.42,
     letterSpacing: 0,
   );
 
-  static const caption2Regular = TextStyle(
-    fontFamily: 'Poppins',
+  static const caption2 = TextStyle(
+    fontFamily: 'Red Hat Text',
     fontSize: 12,
     fontWeight: FontWeight.w400,
     height: 1.33,
@@ -123,10 +124,55 @@ class AppTypography {
   );
 
   static const caption2Bold = TextStyle(
-    fontFamily: 'Poppins',
+    fontFamily: 'Red Hat Text',
     fontSize: 12,
     fontWeight: FontWeight.w700,
     height: 1.66,
     letterSpacing: 0,
+  );
+
+  static const captionMini = TextStyle(
+    fontFamily: 'Red Hat Text',
+    fontSize: 8,
+    fontWeight: FontWeight.w400,
+    height: 1.0,
+    letterSpacing: 0,
+  );
+
+  static const captionMiniBold = TextStyle(
+    fontFamily: 'Red Hat Text',
+    fontSize: 8,
+    fontWeight: FontWeight.w700,
+    height: 1.0,
+    letterSpacing: 0,
+  );
+
+  static const redHeadText = TextStyle(
+    fontFamily: 'Poppins',
+    fontSize: 24,
+    fontWeight: FontWeight.w700,
+    height: 1.5,
+    letterSpacing: 0.1,
+  );
+  static const redHeadUnderText = TextStyle(
+    fontFamily: 'Poppins',
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    height: 1.5,
+    letterSpacing: 0.1,
+  );
+  static const redHeadSkip = TextStyle(
+    fontFamily: 'Poppins',
+    fontSize: 14,
+    fontWeight: FontWeight.w700,
+    height: 1.5,
+    letterSpacing: 0.1,
+  );
+  static const letsCombat = TextStyle(
+    fontFamily: 'Poppins',
+    fontSize: 14,
+    fontWeight: FontWeight.w700,
+    height: 1.5,
+    letterSpacing: 0.1,
   );
 }

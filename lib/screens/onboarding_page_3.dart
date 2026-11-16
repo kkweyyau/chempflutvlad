@@ -31,15 +31,15 @@ class OnBoardingPage3 extends StatelessWidget {
                   Text(
                     'Text, Audio and\nVideo Chat',
                     textAlign: TextAlign.center,
-                    style: AppTypography.title1ExtraBold.copyWith(
+                    style: AppTypography.redHeadText.copyWith(
                       color: AppColors.accent,
                     ),
                   ),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 36),
                   Text(
                     'Intuitive real life experience on\nmobile. Chat with fellow gamers\nbefore and after combat for\nfree!',
                     textAlign: TextAlign.center,
-                    style: AppTypography.headlineRegular.copyWith(
+                    style: AppTypography.redHeadUnderText.copyWith(
                       color: AppColors.black,
                     ),
                   ),
@@ -52,36 +52,42 @@ class OnBoardingPage3 extends StatelessWidget {
               child: SizedBox(
                 width: double.infinity,
                 height: 56,
-                child: ElevatedButton(
-                  onPressed: () {
-                    context.router.replaceAll([const CreateRoute()]);
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: AppColors.accent,
-                    elevation: 0,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(28),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 75),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      context.router.replaceAll([const CreateRoute()]);
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: AppColors.accent,
+                      elevation: 0,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(28),
+                      ),
                     ),
-                  ),
-                  child: Text(
-                    "Let's Combat!",
-                    style: AppTypography.headlineMedium.copyWith(
-                      color: AppColors.white,
+                    child: Text(
+                      "Let's Combat!",
+                      style: AppTypography.letsCombat.copyWith(
+                        color: AppColors.white,
+                      ),
                     ),
                   ),
                 ),
               ),
             ),
-            const SizedBox(height: 30),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                _buildDot(isActive: false),
-                const SizedBox(width: 8),
-                _buildDot(isActive: false),
-                const SizedBox(width: 8),
-                _buildDot(isActive: true),
-              ],
+            // const SizedBox(height: 57),
+            Padding(
+              padding: const EdgeInsets.only(top: 57),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  _buildDot(isActive: false),
+                  const SizedBox(width: 10),
+                  _buildDot(isActive: false),
+                  const SizedBox(width: 10),
+                  _buildDot(isActive: true),
+                ],
+              ),
             ),
             const SizedBox(height: 40),
           ],
@@ -92,8 +98,8 @@ class OnBoardingPage3 extends StatelessWidget {
 
   Widget _buildDot({required bool isActive}) {
     return Container(
-      width: 8,
-      height: 8,
+      width: 10,
+      height: 10,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         color: isActive ? AppColors.accent : AppColors.accentInactive,

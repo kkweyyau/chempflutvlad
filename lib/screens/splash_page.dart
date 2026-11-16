@@ -1,9 +1,8 @@
-
 import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:qweqwe/classi/app_colors.dart';
+import 'package:qweqwe/classi/app_typography.dart';
 import 'package:qweqwe/app_router.dart';
-// import 'package:qweqwe/classi/app_typography.dart';
 
 @RoutePage()
 class SplashPage extends StatefulWidget {
@@ -49,32 +48,26 @@ class _SplashPageState extends State<SplashPage> {
                     'assets/Group 3.png',
                     width: 110,
                     height: 110,
-                  
                   ),
                   
-                  const SizedBox(height: 0),
+                  const SizedBox(height: 10),
 
                   Text(
                     'GAAMETIME',
-                    style: TextStyle(
-                      fontFamily: 'Red Hat Text', 
-                      fontSize: 34, 
-                      fontWeight: FontWeight.w700, 
-                      height: 1.2, 
-                      letterSpacing: 1.5,
+                    style: AppTypography.title1Extra.copyWith(
                       color: AppColors.white,
+                      fontSize: 34,
+                      letterSpacing: 1.5,
                     ),
                   ),
                   
+                  const SizedBox(height: 4),
+
                   Text(
                     'CONNECT WITH YOUR REALITY',
-                    style: TextStyle(
-                      fontFamily: 'Red Hat Text', 
-                      fontSize: 12, 
-                      fontWeight: FontWeight.w700, 
-                      height: 0.5, 
-                      letterSpacing: 0.11,
+                    style: AppTypography.caption2Bold.copyWith(
                       color: AppColors.white,
+                      letterSpacing: 1.2,
                     ),
                   ),
                 ],
