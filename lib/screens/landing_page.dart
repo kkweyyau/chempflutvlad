@@ -10,8 +10,6 @@ class LandingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.background,
-      
-      // 1. ШАПКА
       appBar: AppBar(
         backgroundColor: AppColors.background,
         elevation: 0,
@@ -25,11 +23,11 @@ class LandingPage extends StatelessWidget {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 20.0),
-            child: Center( // Выравниваем по центру по вертикали
+            child: Center(
               child: ClipOval(
                 child: Image.asset(
                   'assets/123.png', 
-                  width: 35, // Чуть уменьшил для шапки
+                  width: 35,
                   height: 35, 
                   fit: BoxFit.cover,
                 ),
@@ -39,7 +37,6 @@ class LandingPage extends StatelessWidget {
         ],
       ),
 
-      // 2. ТЕЛО
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
         child: Column(
@@ -72,14 +69,12 @@ class LandingPage extends StatelessWidget {
         ),
       ),
 
-      // 3. НИЖНЕЕ МЕНЮ
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: AppColors.accent,
         elevation: 0,
         shape: const CircleBorder(),
-        // Твоя картинка в круглой кнопке
         child: ClipOval(
           child: Image.asset(
             'assets/123.png', 
@@ -141,12 +136,10 @@ class LandingPage extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 16),
-          // Если захочешь поставить картинку вместо иконки в карточку, 
-          // используй ту же конструкцию: ClipOval(child: Image.asset(...))
           Icon(
             icon,
             size: 50,
-            color: AppColors.white.withValues(alpha: 0.5), // Использовал новый метод для прозрачности
+            color: AppColors.white.withValues(alpha: 0.5),
           ),
         ],
       ),
