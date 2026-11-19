@@ -32,18 +32,15 @@ dependencies:
     sdk: flutter
   auto_route: ^10.2.0
   qweqwe_ui:
-    path: ./qweqwe_ui
-
-qweqwe_ui:
-  git:
-    path: https://github.com/kkweyyau/qweqwe_ui.git
+    git:
+      url: https://github.com/kkweyyau/qweqwe_ui.git
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   google_fonts: ^9.0.0
   smooth_page_indicator: ^3.0.0
-  auto_route: ^10.2.0
+  
 
 dev_dependencies:
   flutter_test:
