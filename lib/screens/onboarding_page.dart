@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:qweqwe_ui/qweqwe_ui.dart';
 import 'package:qweqwe/app_router.dart';
@@ -43,7 +43,7 @@ class OnBoardingPage extends StatelessWidget {
                   const SizedBox(height: 36), 
                   
                   Text(
-                    'Earn points and real cash when\nyou win a battle with no delay\nin cashning out',
+                    'Earn points and real cash when\nyou win a battle with no delay\nin cashing out',
                     textAlign: TextAlign.center,
                     style: AppTypography.redHeadUnderText.copyWith(
                       color: AppColors.black,
@@ -64,6 +64,8 @@ class OnBoardingPage extends StatelessWidget {
                 style: AppTypography.redHeadSkip.copyWith(
                   color: AppColors.accent,
                   decoration: TextDecoration.underline,
+                  decorationColor: AppColors.accent,
+                  decorationThickness: 1.5,
                 ),
               ),
             ),

@@ -39,6 +39,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   google_fonts: ^9.0.0
   smooth_page_indicator: ^3.0.0
+  material_ui: ^1.11.1
   
 
 dev_dependencies:

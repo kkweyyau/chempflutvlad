@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:qweqwe/app_router.dart';
 import 'package:qweqwe_ui/qweqwe_ui.dart';
@@ -59,6 +59,8 @@ class OnBoardingPage2 extends StatelessWidget {
                 style: AppTypography.redHeadSkip.copyWith(
                   color: AppColors.accent,
                   decoration: TextDecoration.underline,
+                  decorationColor: AppColors.accent,
+                  decorationThickness: 1.5,
                 ),
               ),
             ),

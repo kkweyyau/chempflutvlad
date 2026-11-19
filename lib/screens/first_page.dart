@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:qweqwe_ui/qweqwe_ui.dart';
 
@@ -20,7 +20,7 @@ class FirstPage extends StatelessWidget {
         title: Text(
           'Discover\nCombats',
           style: AppTypography.title2Extrabold.copyWith(
-            color: AppColors.white, 
+            color: AppColors.white,
           ),
         ),
         actions: [
@@ -113,7 +113,7 @@ class FirstPage extends StatelessWidget {
                                     ClipOval(
                                       child: Image.asset(
                                         'assets/123.png', 
-                                        width: 40, height: 40, fit: BoxFit.cover, 
+                                        width: 40, height: 40, fit: BoxFit.cover,
                                       ),
                                     ),
                                     Positioned(
@@ -139,7 +139,7 @@ class FirstPage extends StatelessWidget {
                                   'Scott Brown', 
                                   style: AppTypography.caption2Bold.copyWith(
                                     color: AppColors.black,
-                                  ), 
+                                  ),
                                   maxLines: 1, 
                                   overflow: TextOverflow.ellipsis,
                                 ),

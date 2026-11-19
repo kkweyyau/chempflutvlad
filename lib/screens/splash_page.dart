@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:qweqwe/app_router.dart';
 import 'package:qweqwe_ui/qweqwe_ui.dart';
@@ -39,34 +39,37 @@ class _SplashPageState extends State<SplashPage> {
 
           Center(
             child: Transform.translate(
-              offset: const Offset(0, -90),
+              offset: const Offset(0, -85),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Image.asset(
                     'assets/Group 3.png',
-                    width: 110,
-                    height: 110,
+                    width: 70,
+                    fit: BoxFit.contain,
                   ),
                   
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 5),
 
                   Text(
-                    'GAAMETIME',
-                    style: AppTypography.title1Extra.copyWith(
+                    'GAAMETIIME',
+                    style: AppTypography.redHeadText.copyWith(
                       color: AppColors.white,
-                      fontSize: 34,
-                      letterSpacing: 1.5,
+                      fontSize: 28,
+                      letterSpacing: 1.3,
+                      height: 1.4,
                     ),
                   ),
                   
-                  const SizedBox(height: 4),
+                  const SizedBox(height: 0),
 
                   Text(
                     'CONNECT WITH YOUR REALITY',
                     style: AppTypography.caption2Bold.copyWith(
                       color: AppColors.white,
-                      letterSpacing: 1.2,
+                      letterSpacing: 0.2,
+                      fontSize: 11,
+                      height: 0.5,
                     ),
                   ),
                 ],
