@@ -14,21 +14,15 @@ class LandingPage extends StatelessWidget {
         backgroundColor: AppColors.background,
         elevation: 0,
         titleSpacing: 30,
-        title: Text(
-          'Stone Stellar',
-          style: AppTypography.title2Semibold.copyWith(
-            color: AppColors.accent,
-          ),
-        ),
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 20.0),
             child: Center(
               child: ClipOval(
                 child: Image.asset(
-                  'assets/123.png', 
-                  width: 35,
-                  height: 35, 
+                  'assets/123.png',
+                  width: 22,
+                  height: 22,
                   fit: BoxFit.cover,
                 ),
               ),
@@ -36,7 +30,6 @@ class LandingPage extends StatelessWidget {
           ),
         ],
       ),
-
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
         child: Column(
@@ -46,29 +39,28 @@ class LandingPage extends StatelessWidget {
               description: 'Easily schedule combat games and invite your friends to join.',
               icon: Icons.calendar_today,
             ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 10),
             _buildCard(
               title: 'Meditation',
               description: '10 min of quick calm breaks and breathing exercises can help you focus.',
               icon: Icons.self_improvement,
             ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 8.57),
             _buildCard(
               title: 'Discover Combats',
               description: 'Find and watch live combats, meet new gamers and get tips.',
               icon: Icons.travel_explore,
             ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 11.43),
             _buildCard(
               title: 'Message Players',
               description: 'Connect and chat with fellow gamers to form teams.',
               icon: Icons.chat_bubble_outline,
             ),
-            const SizedBox(height: 80),
+            const SizedBox(height: 34),
           ],
         ),
       ),
-
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
@@ -77,9 +69,9 @@ class LandingPage extends StatelessWidget {
         shape: const CircleBorder(),
         child: ClipOval(
           child: Image.asset(
-            'assets/123.png', 
-            width: 40, 
-            height: 40, 
+            'assets/123.png',
+            width: 40,
+            height: 40,
             fit: BoxFit.cover,
           ),
         ),
@@ -88,16 +80,24 @@ class LandingPage extends StatelessWidget {
         color: AppColors.accent,
         shape: const CircularNotchedRectangle(),
         notchMargin: 8.0,
+        padding: EdgeInsets.zero,
         child: SizedBox(
-          height: 60,
+          height: 75,
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              _buildNavIcon(Icons.bar_chart, 'Statistics'),
-              _buildNavIcon(Icons.search, 'Discover'),
-              const SizedBox(width: 40),
-              _buildNavIcon(Icons.chat, 'Chat'),
-              _buildNavIcon(Icons.person, 'Profile'),
+              Expanded(
+                child: _buildNavIcon(Icons.bar_chart, 'Statistics'),
+              ),
+              Expanded(
+                child: _buildNavIcon(Icons.search, 'Discover'),
+              ),
+              const SizedBox(width: 70),
+              Expanded(
+                child: _buildNavIcon(Icons.chat, 'Chat'),
+              ),
+              Expanded(
+                child: _buildNavIcon(Icons.person, 'Profile'),
+              ),
             ],
           ),
         ),
@@ -147,16 +147,27 @@ class LandingPage extends StatelessWidget {
   }
 
   Widget _buildNavIcon(IconData icon, String label) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Icon(icon, color: AppColors.white),
-        const SizedBox(height: 4),
-        Text(
-          label,
-          style: AppTypography.captionMini.copyWith(color: AppColors.white),
-        )
-      ],
+    return InkWell(
+      onTap: () {},
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(
+            icon,
+            color: AppColors.white,
+            size: 32,
+          ),
+          const SizedBox(height: 6),
+          Text(
+            label,
+            style: AppTypography.captionMini.copyWith(
+              color: AppColors.white,
+              fontSize: 13,
+              fontWeight: FontWeight.w500,
+            ),
+          )
+        ],
+      ),
     );
   }
 }
