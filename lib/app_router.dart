@@ -7,6 +7,7 @@ import 'package:qweqwe/screens/onboarding_page_3.dart';
 import 'package:qweqwe/screens/create_page.dart';
 import 'package:qweqwe/screens/login_page.dart';
 import 'package:qweqwe/screens/landing_page.dart';
+import 'package:qweqwe/screens/side_menu_page.dart';
 
 part 'app_router.gr.dart';
 
@@ -22,5 +23,6 @@ class AppRouter extends RootStackRouter {
     AutoRoute(page: CreateRoute.page),
     AutoRoute(page: LoginRoute.page),
     AutoRoute(page: LandingRoute.page),
+    AutoRoute(page: SideMenuRoute.page),
   ];
 }

@@ -1,6 +1,7 @@
 import 'package:material_ui/material_ui.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:qweqwe_ui/qweqwe_ui.dart';
+import 'package:qweqwe/app_router.dart';
 
 @RoutePage()
 class LandingPage extends StatelessWidget {
@@ -13,18 +14,74 @@ class LandingPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColors.background,
         elevation: 0,
-        titleSpacing: 30,
+        
+        // --- ВОТ ЗДЕСЬ МЫ ЗАМЕНЯЕМ СТРЕЛКУ НА ТРИ ПОЛОСКИ ---
+        leadingWidth: 70, 
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 20.0),
+          child: InkWell(
+            onTap: () {
+              context.router.push(const SideMenuRoute()); 
+            },
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  height: 4.5,
+                  width: 28,
+                  decoration: BoxDecoration(
+                    color: AppColors.accent,
+                    borderRadius: BorderRadius.circular(2),
+                  ),
+                ),
+                const SizedBox(height: 4),
+                Container(
+                  height: 4.5,
+                  width: 28,
+                  decoration: BoxDecoration(
+                    color: AppColors.accent,
+                    borderRadius: BorderRadius.circular(2),
+                  ),
+                ),
+                const SizedBox(height: 4),
+                Container(
+                  height: 4.5,
+                  width: 16,
+                  decoration: BoxDecoration(
+                    color: AppColors.accent,
+                    borderRadius: BorderRadius.circular(2),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+        // ----------------------------------------------------
+
+        titleSpacing: 0, 
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 20.0),
             child: Center(
-              child: ClipOval(
-                child: Image.asset(
-                  'assets/123.png',
-                  width: 22,
-                  height: 22,
-                  fit: BoxFit.cover,
-                ),
+              child: Row( // Добавил Row для логотипа и текста
+                children: [
+                  ClipOval(
+                    child: Image.asset(
+                      'assets/123.png',
+                      width: 24,
+                      height: 24,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  Text(
+                    'Stone Stellar',
+                    style: AppTypography.title3Semibold.copyWith(
+                      color: Colors.black, // Или AppColors.black
+                    ),
+                  ),
+                ],
               ),
             ),
           ),

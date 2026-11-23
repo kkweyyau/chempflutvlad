@@ -123,6 +123,22 @@ class OnBoardingRoute3 extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [SideMenuPage]
+class SideMenuRoute extends PageRouteInfo<void> {
+  const SideMenuRoute({List<PageRouteInfo>? children})
+    : super(SideMenuRoute.name, initialChildren: children);
+
+  static const String name = 'SideMenuRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const SideMenuPage();
+    },
+  );
+}
+
+/// generated route for
 /// [SplashPage]
 class SplashRoute extends PageRouteInfo<void> {
   const SplashRoute({List<PageRouteInfo>? children})
