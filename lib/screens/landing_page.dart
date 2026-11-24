@@ -14,15 +14,15 @@ class LandingPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColors.background,
         elevation: 0,
+        leadingWidth: 70,
         
-        // --- ВОТ ЗДЕСЬ МЫ ЗАМЕНЯЕМ СТРЕЛКУ НА ТРИ ПОЛОСКИ ---
-        leadingWidth: 70, 
         leading: Padding(
           padding: const EdgeInsets.only(left: 20.0),
           child: InkWell(
             onTap: () {
               context.router.push(const SideMenuRoute()); 
             },
+
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -35,7 +35,9 @@ class LandingPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(2),
                   ),
                 ),
+
                 const SizedBox(height: 4),
+
                 Container(
                   height: 4.5,
                   width: 28,
@@ -44,7 +46,9 @@ class LandingPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(2),
                   ),
                 ),
+
                 const SizedBox(height: 4),
+
                 Container(
                   height: 4.5,
                   width: 16,
@@ -57,14 +61,13 @@ class LandingPage extends StatelessWidget {
             ),
           ),
         ),
-        // ----------------------------------------------------
 
         titleSpacing: 0, 
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 20.0),
             child: Center(
-              child: Row( // Добавил Row для логотипа и текста
+              child: Row(
                 children: [
                   ClipOval(
                     child: Image.asset(
@@ -78,7 +81,7 @@ class LandingPage extends StatelessWidget {
                   Text(
                     'Stone Stellar',
                     style: AppTypography.title3Semibold.copyWith(
-                      color: Colors.black, // Или AppColors.black
+                      color: AppColors.black,
                     ),
                   ),
                 ],
@@ -87,6 +90,9 @@ class LandingPage extends StatelessWidget {
           ),
         ],
       ),
+
+
+      
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
         child: Column(
