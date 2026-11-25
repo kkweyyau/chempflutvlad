@@ -50,7 +50,7 @@ class SideMenuPage extends StatelessWidget {
             ),
           ),
             Padding(
-              padding: EdgeInsets.only(left: 60, right: 0, top: 71),
+              padding: EdgeInsets.only(left: 60, right: 0, top: 36),
               child: Row(
                 children: [
                   Container(
@@ -60,7 +60,7 @@ class SideMenuPage extends StatelessWidget {
                       shape: BoxShape.circle,
                       border: BoxBorder.all(
                         color: AppColors.accent,
-                        width: 4.67,
+                        width: 3,
                       ),
                       image: DecorationImage(
                         image: 
@@ -86,13 +86,13 @@ class SideMenuPage extends StatelessWidget {
                       children: [
                         Icon(Icons.workspace_premium,
                           size: 10,
-                          color: Color(0xFFF4C73E),
+                          color: AppColors.yellow,
                         ),
                         
                         Text(
                           'Gold Player',
                           style: AppTypography.redHeadText.copyWith(
-                            color: Color(0xFFF4C73E),
+                            color: AppColors.yellow,
                             fontSize: 10,
                             fontWeight: FontWeight(400),
                             letterSpacing: -0.3,
@@ -105,43 +105,106 @@ class SideMenuPage extends StatelessWidget {
               ],
               ),
             ),
-            Padding(
-              padding: EdgeInsets.only(top: 53, right: 60,left: 60),
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 0),
-                    child: Row(
-                      children: [
-                        Icon(
-                          Icons.person_outline_rounded,
-                          color: AppColors.accent,
-                          size: 22,
+            Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 53, right: 60, left: 60),
+                  child: Column(
+                    children: [
+                      SideMenuItem(
+                        icon: Icons.person_outline_rounded,
+                        title: 'My Profile',
+                        onTap: () {},
+                      ),
+                      // const SizedBox(height: 34),
+            
+                      Padding(
+                        padding: const EdgeInsets.only(top: 34),
+                        child: SideMenuItem(
+                          icon: Icons.settings_outlined,
+                          title: 'Settings',
+                          onTap: () {},
                         ),
-                        const SizedBox(width: 24),
-                        Row(
-                          children: [
-                            Text(
-                              'My Profile',
-                              style: AppTypography.redHeadText.copyWith(
-                                fontSize: 16,
-                                fontWeight: FontWeight(400),
-                                letterSpacing: -0.3,
-                              ),
+                      ),
 
-                            )
-                          ],
+                      // const SizedBox(height: 34),
+
+                      Padding(
+                        padding: const EdgeInsets.only(top: 34),
+                        child: SideMenuItem(
+                          icon: Icons.tune_rounded,
+                          title: 'Statistics',
+                          onTap: () {},
                         ),
-                      ],
-                    ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 34),
+                        child: SideMenuItem(
+                          icon: Icons.location_on_outlined,
+                          title: 'Discover Combat',
+                          onTap: () {},
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 34),
+                        child: SideMenuItem(
+                          icon: Icons.message_outlined,
+                          title: 'Landing',
+                          onTap: () {},
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 34),
+                        child: SideMenuItem(
+                          icon: Icons.translate,
+                          title: 'Change Language',
+                          onTap: () {},
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 34),
+                        child: SideMenuItem(
+                          icon: Icons.dark_mode_outlined,
+                          title: 'Change App Skin',
+                          onTap: () {},
+                        ),
+                      ),
+                    ],
+                    
                   ),
                   
-                ],
-              ),
+                ),
+                SafeArea(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 100),
+                        child: ElevatedButton(
+                          onPressed: () {
+                            
+                          },
+                          child: Text(
+                            'Logout',
+                            style: AppTypography.redHeadText.copyWith(
+                            color: AppColors.accent,
+                            fontSize: 20,
+                            fontWeight: FontWeight(700),        
+                          ),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ],
             ),
+            
           ],
+          
         ),
       ),
+      
     );
   }
 }

@@ -589,7 +589,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: edbed754c6263b756754ce4dc679080cbddc5633
+      resolved-ref: baeb87e210db532cf1dd9880207bb6b08f200ebf
       url: "https://github.com/kkweyyau/qweqwe_ui.git"
     source: git
     version: "0.0.1"
