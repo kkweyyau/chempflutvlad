@@ -18,7 +18,7 @@ class SideMenuPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 50, right: 44),
+              padding: const EdgeInsets.only(right: 44),
               child: Align(
                 alignment: Alignment.centerRight,
                 child: IconButton(
@@ -50,7 +50,7 @@ class SideMenuPage extends StatelessWidget {
             ),
           ),
             Padding(
-              padding: EdgeInsets.only(left: 60, right: 0, top: 36),
+              padding: EdgeInsets.only(left: 60, right: 0, top: 20),
               child: Row(
                 children: [
                   Container(
@@ -121,8 +121,8 @@ class SideMenuPage extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(top: 34),
                         child: SideMenuItem(
-                          icon: Icons.settings_outlined,
-                          title: 'Settings',
+                          icon: Icons.event_available_outlined,
+                          title: 'Schedule',
                           onTap: () {},
                         ),
                       ),
@@ -179,29 +179,32 @@ class SideMenuPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(top: 100),
-                        child: ElevatedButton(
+                        padding: const EdgeInsets.only(top: 129),
+                        child: TextButton.icon(
                           onPressed: () {
                             
                           },
-                          child: Text(
-                            'Logout',
-                            style: AppTypography.redHeadText.copyWith(
+                          icon: Icon(
+                            Icons.logout,
                             color: AppColors.accent,
-                            fontSize: 20,
-                            fontWeight: FontWeight(700),        
+                            size: 24,
                           ),
-                          ),
+                            label: Text(
+                              'Logout',
+                              style: AppTypography.redHeadText.copyWith(
+                                color:  AppColors.accent,
+                                letterSpacing: 0.38,
+                                fontWeight: FontWeight(700),
+                              ),
+                            ),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
               ],
             ),
-            
           ],
-          
         ),
       ),
       
