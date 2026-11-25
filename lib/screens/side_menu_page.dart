@@ -116,8 +116,9 @@ class SideMenuPage extends StatelessWidget {
                         title: 'My Profile',
                         onTap: () {},
                       ),
+                      
                       // const SizedBox(height: 34),
-            
+
                       Padding(
                         padding: const EdgeInsets.only(top: 34),
                         child: SideMenuItem(
