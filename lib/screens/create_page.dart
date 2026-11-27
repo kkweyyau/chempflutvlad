@@ -61,97 +61,51 @@ class CreatePage extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 52.0, right: 60.0),
                 child: Column(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 16.0),
-                      child: TextFormField(
-                        style: AppTypography.caption.copyWith(color: AppColors.black),
-                        decoration: InputDecoration(
-                          labelText: 'Full Name',
-                          labelStyle: AppTypography.caption.copyWith(color: AppColors.black),
-                          enabledBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
-                          focusedBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
-                        ),
-                      ),
+                    const AppTextField(
+                      labelText: 'Full Name',
                     ),
 
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 16.0),
-                      child: TextFormField(
-                        style: AppTypography.caption.copyWith(color: AppColors.black),
-                        decoration: InputDecoration(
-                          labelText: 'User Name',
-                          labelStyle: AppTypography.caption.copyWith(color: AppColors.black),
-                          enabledBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
-                          focusedBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
-                        ),
-                      ),
+                    const AppTextField(
+                      labelText: 'User Name',
                     ),
                     
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 16.0),
-                      child: TextFormField(
-                        keyboardType: TextInputType.phone,
-                        style: AppTypography.caption.copyWith(color: AppColors.black),
-                        decoration: InputDecoration(
-                          hintText: 'Your Phone',
-                          hintStyle: AppTypography.caption.copyWith(color: AppColors.black),
-                          prefixIcon: Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              const SizedBox(width: 10),
-                              Text('+234', style: AppTypography.caption.copyWith(color: AppColors.black)),
-                              const SizedBox(width: 10),
-                              Container(width: 1, height: 20, color: AppColors.accentInactive),
-                              const SizedBox(width: 10),
-                            ],
-                          ),
-                          enabledBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
-                          focusedBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
+                    AppTextField(
+                      labelText: 'Your Phone',
+                      keyboardType: TextInputType.phone,
+                      prefixIcon: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+
+                        const SizedBox(width: 10),
+
+                        Text('+7', style: AppTypography.caption.copyWith(color: AppColors.black)),
+
+                        const SizedBox(width: 10),
+
+                        Container(
+                          width: 1, height: 20, color: AppColors.accentInactive
                         ),
+
+                        const SizedBox(width: 10),
+                        ],
                       ),
                     ),
 
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 16.0),
-                      child: TextFormField(
-                        style: AppTypography.caption.copyWith(color: AppColors.black),
-                        decoration: InputDecoration(
-                          labelText: 'Email',
-                          labelStyle: AppTypography.caption.copyWith(color: AppColors.black),
-                          enabledBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
-                          focusedBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
-                        ),
-                      ),
+
+                    const AppTextField(
+                      labelText: 'Email',
                     ),
 
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 16.0),
-                      child: TextFormField(
-                        obscureText: true,
-                        style: AppTypography.caption.copyWith(color: AppColors.black),
-                        decoration: InputDecoration(
-                          labelText: 'Password',
-                          labelStyle: AppTypography.caption.copyWith(color: AppColors.black),
-                          suffixIcon: const Icon(Icons.visibility_off, color: AppColors.accentInactive, size: 20),
-                          enabledBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
-                          focusedBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
-                        ),
-                      ),
+                    const AppTextField(
+                      labelText: 'Password',
+                      obscureText: true,
+                      suffixIcon: Icon(Icons.visibility, color: AppColors.black, size: 20),
                     ),
 
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 16.0),
-                      child: TextFormField(
-                        obscureText: true,
-                        style: AppTypography.caption.copyWith(color: AppColors.black),
-                        decoration: InputDecoration(
-                          labelText: 'Confirm Password',
-                          labelStyle: AppTypography.caption.copyWith(color: AppColors.black),
-                          suffixIcon: const Icon(Icons.visibility_off, color: AppColors.accentInactive, size: 20),
-                          enabledBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
-                          focusedBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppColors.accent)),
-                        ),
-                      ),
+                    const AppTextField(
+                      labelText: 'Confirm Password',
+                      obscureText: true,
+                      suffixIcon: Icon(Icons.visibility, color: AppColors.black, size: 20),
                     ),
                   ],
                 ),
